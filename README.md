@@ -1,6 +1,6 @@
 # Marshall's ACE3 Tandem Jumping Mod
 
-for a few months, I've been working on a tandem skydiving mod and today I'm proud to announce that ill be releasing this mod to steam workshop in the next few weeks I am working on the final touches to make this mod be able to move from the Alpha build to open it up for a public Beta. below is some media showcasing the mod and after that is a list of current and future features.
+For a few months, I've been working on a tandem skydiving mod below is a list of current and future features this mod has lots of capability for mod users and scenario/mod makes i belive that all mods should be open source so this is why I'm posting this mod on GitHub for the public to help improve on my work and use it to learn to code in Arma hopefully i class this as my biggest mod sofar so hopefully its successful.
  
 
 ## Features:
@@ -68,7 +68,7 @@ for a few months, I've been working on a tandem skydiving mod and today I'm prou
     };
 ```
 
-along with all the scripts being placed like this, there is also a handy guide in each file referring to how to use the script and what it does an example is shown below
+along with all the scripts being placed like this, there is also a handy guide in each file referring to how to use the script and what it does an example is shown below i am aware i have a lot of spelling mistakes in my notes sorry.
 ```
 /*
  * Author: Scott Marshall
