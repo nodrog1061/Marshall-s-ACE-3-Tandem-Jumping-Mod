@@ -20,7 +20,7 @@ For a few months, I've been working on a tandem skydiving mod below is a list of
 
  
 
-### How to use the mod on the release:
+### How to use the mod:
 
   1. go to an arsenal and get a tandem harness and parachute
   ### From land:
