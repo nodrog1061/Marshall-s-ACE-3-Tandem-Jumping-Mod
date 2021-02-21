@@ -6,6 +6,7 @@
  * Arguments:
  * 	player (object)
  * 	target (object)
+ *  state (bool) [false == ground activation true == from vehicle activation] just skips assigment of varibles FROM V4.50
  * 	via [_player,_target] call SM_tandem_jumping_fnc_groundAttach
  *
  * Return Value:
@@ -17,6 +18,7 @@
 
 _player = param[0,objNull];
 _target = param[1,objNull];
+_state = param[3,false];
 
 _player removeItem "SM_Harness";
 
@@ -55,8 +57,11 @@ if(!(isPlayer _target))then{
 player setVariable ["attached",true];
 player setVariable ["tandem_inVehicle",false];
 
+if(!(_state))then{
 player setVariable ["tandem_player",_player];
 player setVariable ["tandem_target",_target];
+};
+
 
 []spawn{waitUntil { sleep 2; if((!isTouchingGround player) || ((velocity player select 2) <= -3) && !(player getVariable "tandem_inVehicle"))exitWith{true};false};
 player setVariable ["freefall",true];

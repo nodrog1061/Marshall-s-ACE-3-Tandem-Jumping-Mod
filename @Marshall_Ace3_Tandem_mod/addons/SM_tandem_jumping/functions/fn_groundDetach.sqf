@@ -16,7 +16,7 @@
 _player = param[0,objNull];
 _target = param[1,objNull];
 
-if (_target == objNull || _target =! (player getVariable "tandem_target") || isNull _target) then{
+if ((_target == objNull) || !(_target isEqualTo (player getVariable "tandem_target")) || (isNull _target)) then{
 	_target = player getVariable "tandem_target";
 };
 

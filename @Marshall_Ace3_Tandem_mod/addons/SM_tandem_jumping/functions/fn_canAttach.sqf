@@ -1,7 +1,7 @@
 /*
  * Author: Scott Marshall
  *  checks if the player has a tandem harness, isnt attached, has a para as a backpack and returns it requred for ace 
- *  also used as a template for other checks
+ *  also used as a template for other checks (I stole it from my old mod thats why its says blindfold)
  *
  * Arguments:
  * 	player (object)
