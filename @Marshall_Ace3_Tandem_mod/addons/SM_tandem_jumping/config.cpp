@@ -28,6 +28,7 @@ class CfgFunctions
 			class freeFall{};
 			//class remoteFreeFall{};
 			class aiSp{};
+			class canOrDoSelfDetach{};
 		};
 	};
 };
@@ -36,37 +37,46 @@ class CfgVehicles{
 	class Man;
 	class CAManBase: Man	{
 		class ACE_Actions{
-					class ACE_MainActions{
-								class SM_clipIntoHarness{
-									displayName="Clip into Harness";
-									condition="[_player,_target] call SM_tandem_jumping_fnc_canGroundAttach";
-									statement="[_player,_target] call SM_tandem_jumping_fnc_groundAttach";
-									showDisabled=0;
-									priority=1;
-									distance=2;
-									exceptions[] = {"isNotSwimming","isNotInside","isNotSitting","isNotOnLadder","isNotRefueling"};
-								};
-								class SM_unClipHarness{
-									displayName="Remove Clip";
-									condition="[_player,_target] call SM_tandem_jumping_fnc_canDetach";
-									statement="[_player,_target] call SM_tandem_jumping_fnc_groundDetach";
-									exceptions[] = {"isNotSwimming","isNotInside","isNotSitting","isNotOnLadder","isNotRefueling"};
-									showDisabled=0;
-									priority=1;
-									distance=2;
-								};
-								class SM_ejectWithHarness{
-									displayName="Eject with Harnes";
-									condition="[_player,_target] call SM_tandem_jumping_fnc_canAirEject";
-									statement="[_player,_target] call SM_tandem_jumping_fnc_airEject";
-									exceptions[] = {"isNotSwimming","isNotSitting","isNotOnLadder","isNotRefueling"};
-									showDisabled=0;
-									priority=1;
-									distance=2;
-								};
-					};
+			class ACE_MainActions{
+				class SM_clipIntoHarness{
+					displayName="Clip into Harness";
+					condition="[_player,_target] call SM_tandem_jumping_fnc_canGroundAttach";
+					statement="[_player,_target] call SM_tandem_jumping_fnc_groundAttach";
+					showDisabled=0;
+					priority=1;
+					distance=2;
+					exceptions[] = {"isNotSwimming","isNotInside","isNotSitting","isNotOnLadder","isNotRefueling"};
+				};
+				class SM_unClipHarness{
+					displayName="Remove Clip";
+					condition="[_player,_target] call SM_tandem_jumping_fnc_canDetach";
+					statement="[_player,_target] call SM_tandem_jumping_fnc_groundDetach";
+					exceptions[] = {"isNotSwimming","isNotInside","isNotSitting","isNotOnLadder","isNotRefueling"};
+					showDisabled=0;
+					priority=1;
+					distance=2;
+				};
+				class SM_ejectWithHarness{
+					displayName="Eject with Harnes";
+					condition="[_player,_target] call SM_tandem_jumping_fnc_canAirEject";
+					statement="[_player,_target] call SM_tandem_jumping_fnc_airEject";
+					exceptions[] = {"isNotSwimming","isNotSitting","isNotOnLadder","isNotRefueling"};
+					showDisabled=0;
+					priority=1;
+					distance=2;
+				};
 			};
 		};
+		class ACE_SelfActions {
+			class SM_unClipHarnessSelf{
+				displayName="Unclip Partner";
+				condition="[true] call SM_tandem_jumping_fnc_canOrDoSelfDetach";
+				statement="[false] call SM_tandem_jumping_fnc_canOrDoSelfDetach";
+				exceptions[] = {"isNotSwimming","isNotInside","isNotSitting","isNotOnLadder","isNotRefueling"};
+				showDisabled=0;
+			};
+		};
+	};
 };
 class CfgWeapons
 {

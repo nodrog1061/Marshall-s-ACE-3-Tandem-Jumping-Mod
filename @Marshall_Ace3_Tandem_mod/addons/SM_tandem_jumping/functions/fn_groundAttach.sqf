@@ -18,7 +18,7 @@
 
 _player = param[0,objNull];
 _target = param[1,objNull];
-_state = param[3,false];
+_state = param[2,false];
 
 _player removeItem "SM_Harness";
 
