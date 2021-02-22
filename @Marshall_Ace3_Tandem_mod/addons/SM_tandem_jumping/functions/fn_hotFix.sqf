@@ -24,7 +24,7 @@ player addEventHandler ["GetOutMan", {
 		if(((typeOf _vehicle) == "Steerable_Parachute_F") || ((typeOf _vehicle) == "NonSteerable_Parachute_F"))then{
 			[]spawn{
 				sleep 5;
-				player setVariable ["attached",false];
+				[player getVariable "tandem_player",player getVariable "tandem_target"] call SM_tandem_jumping_fnc_groundDetach;
 			};
 		};
 	};
