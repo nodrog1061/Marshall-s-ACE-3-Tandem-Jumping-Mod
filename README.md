@@ -1,3 +1,5 @@
+<img alt="PyPI - Python Version" src="https://img.shields.io/badge/Arma%203-%3E%3Dv2.0-informational"> <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/nodrog1061/Marshall-s-ACE-3-Tandem-Jumping-Mod?include_prereleases"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/nodrog1061/Marshall-s-ACE-3-Tandem-Jumping-Mod">
+
 # Marshall's ACE3 Tandem Jumping Mod
 
 For a few months, I've been working on a tandem skydiving mod below is a list of current and future features this mod has lots of capability for mod users and scenario/mod makes i belive that all mods should be open source so this is why I'm posting this mod on GitHub for the public to help improve on my work and use it to learn to code in Arma hopefully i class this as my biggest mod sofar so hopefully its successful.
